@@ -4,9 +4,11 @@ project(MyRust LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 # ---- Rust 크레이트 연동 (Corrosion) ----
-# Corrosion이 cargo 호출, 빌드 프로필 매핑, 소스 변경 감지,
-# Rust std가 요구하는 시스템 라이브러리 링크를 모두 처리한다.
+# Corrosion이 cargo 호출, 빌드 프로필 매핑, 소스 변경 감지, Rust std가 요구하는 시스템 라이브러리 링크를 모두
+# 처리한다.
 include(FetchContent)
 FetchContent_Declare(
   Corrosion
