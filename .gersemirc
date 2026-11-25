@@ -1,0 +1,5 @@
+# .gersemirc
+# Approximate Google C++ conventions
+line_length: 80                  # Match Google C++ column limit
+indent: 2                        # 2-space indentation
+list_expansion: favour-inlining  # Keep short argument lists on one line

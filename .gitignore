@@ -1,0 +1,46 @@
+# ---- CMake / C++ build outputs ----
+build/
+Debug/
+Release/
+RelWithDebInfo/
+MinSizeRel/
+cmake-build-*/
+out/
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+Testing/
+
+# Compiled objects / libraries / executables
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.pdb
+
+# ---- Rust ----
+# Cargo build directory (Cargo.lock is committed: this crate is linked into a binary)
+target/
+rust-target/
+**/*.rs.bk
+
+# ---- Editors / OS ----
+.vscode/*
+!.vscode/c_cpp_properties.json
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+.cache/
+*.swp
+*~
+.DS_Store

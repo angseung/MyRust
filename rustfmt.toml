@@ -1,0 +1,5 @@
+# Google doesn't publish its own Rust style guide; Google's Rust projects
+# use the standard rustfmt style. These settings follow AOSP's rustfmt.toml.
+edition = "2021"
+newline_style = "Unix"
+use_small_heuristics = "Max"

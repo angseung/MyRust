@@ -1,0 +1,15 @@
+BasedOnStyle: Google
+IncludeBlocks: Regroup
+IncludeCategories:
+  # 1. C system headers (POSIX/libc only)
+  - Regex: '^<(assert|ctype|errno|fcntl|float|limits|math|pthread|signal|stdarg|stddef|stdint|stdio|stdlib|string|time|unistd|sys/.*)\.h>$'
+    Priority: 1
+  # 2. C++ standard library headers (no extension)
+  - Regex: '^<[a-z_]+>$'
+    Priority: 2
+  # 3. Other libraries' headers (TensorRT, CUDA, OpenCV, ...)
+  - Regex: '^<'
+    Priority: 3
+  # 4. Project headers
+  - Regex: '^"'
+    Priority: 4
