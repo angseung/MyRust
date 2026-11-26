@@ -1,0 +1,101 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake: configure (Debug)",
+            "type": "shell",
+            "command": "cmake",
+            "linux": {
+                "args": [
+                    "--preset",
+                    "linux-debug"
+                ]
+            },
+            "windows": {
+                "args": [
+                    "--preset",
+                    "windows-debug"
+                ]
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake: build (Debug)",
+            "type": "shell",
+            "command": "cmake",
+            "linux": {
+                "args": [
+                    "--build",
+                    "--preset",
+                    "linux-debug",
+                    "-j"
+                ]
+            },
+            "windows": {
+                "args": [
+                    "--build",
+                    "--preset",
+                    "windows-debug"
+                ],
+                "problemMatcher": "$msCompile"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "CMake: configure (Debug)",
+            "problemMatcher": "$gcc",
+            "group": "build"
+        },
+        {
+            "label": "CMake: configure (Release)",
+            "type": "shell",
+            "command": "cmake",
+            "linux": {
+                "args": [
+                    "--preset",
+                    "linux-release"
+                ]
+            },
+            "windows": {
+                "args": [
+                    "--preset",
+                    "windows-release"
+                ]
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake: build (Release)",
+            "type": "shell",
+            "command": "cmake",
+            "linux": {
+                "args": [
+                    "--build",
+                    "--preset",
+                    "linux-release",
+                    "-j"
+                ]
+            },
+            "windows": {
+                "args": [
+                    "--build",
+                    "--preset",
+                    "windows-release"
+                ],
+                "problemMatcher": "$msCompile"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": "CMake: configure (Release)",
+            "problemMatcher": "$gcc",
+            "group": "build"
+        }
+    ]
+}

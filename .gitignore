@@ -37,6 +37,7 @@ rust-target/
 # ---- Editors / OS ----
 .vscode/*
 !.vscode/c_cpp_properties.json
+!.vscode/tasks.json
 !.vscode/settings.json
 !.vscode/extensions.json
 .idea/
