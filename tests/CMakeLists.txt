@@ -9,9 +9,9 @@ FetchContent_Declare(
   DOWNLOAD_EXTRACT_TIMESTAMP
   TRUE
 )
-# Windows: 부모 프로젝트의 CRT 설정을 덮어쓰지 않도록
+# Windows: don't override the parent project's CRT settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-# 프로젝트에 gtest/gmock을 설치 대상으로 넣지 않음
+# Don't add gtest/gmock to this project's install targets
 set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
